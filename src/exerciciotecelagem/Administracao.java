@@ -13,8 +13,8 @@ public class Administracao extends Funcionario{
     private int falta = 0;
     private double desconto;
     
-    public Administracao(String nome, String rg, double salarioBruto){
-        super(nome,rg);
+    public Administracao(String nome, String rg, int codigo,double salarioBruto){
+        super(nome,rg,codigo);
         this.salarioBruto = salarioBruto;
     }
 
@@ -41,7 +41,7 @@ public class Administracao extends Funcionario{
         super.hollerith();
         System.out.println("Salario Base: " + salarioBruto + "\n" + 
                             "Faltas: " + falta + "\n" + 
-                            "Total Descontado do salario: " + desconto + "\n" + 
+                            "Total Descontado do salario: " + falta * (salarioBruto / 30) + "\n" + 
                             "Salario Liquido: " + salarioLiquido() + "\n");
         System.out.print("----------------------------------------------------------\n");
     }

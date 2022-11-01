@@ -13,8 +13,8 @@ public class Vendedores extends Funcionario{
     double totalVenda=0;
     double comissao;
     
-    public Vendedores(String nome, String rg, double salarioFixo){
-        super(nome,rg);
+    public Vendedores(String nome, String rg, int codigo, double salarioFixo){
+        super(nome,rg,codigo);
         this.salarioFixo = salarioFixo;
     }
     
@@ -38,7 +38,7 @@ public class Vendedores extends Funcionario{
     public void hollerith(){
         super.hollerith();
         System.out.println("Salario Fixo : " + salarioFixo + "\n" + 
-                            "Comissão: " + comissao + "\n" + 
+                            "Comissão: " + totalVenda * 0.03 + "\n" + 
                             "Salario Liquido: " + salarioLiquido() + "\n");
         System.out.print("----------------------------------------------------------\n");
     }

@@ -13,8 +13,8 @@ public class Producao extends Funcionario{
     int horaDia;
     int horaNoite;
     
-    public Producao(String nome, String rg, double valorHora){
-        super(nome,rg);
+    public Producao(String nome, String rg, int codigo, double valorHora){
+        super(nome,rg,codigo);
         this.valorHora = valorHora;
         
     }

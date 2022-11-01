@@ -11,17 +11,27 @@ package exerciciotecelagem;
 public abstract class Funcionario {
     private String nome;
     private String rg;
+    private int codigo;
     
     //contrutores
-    public Funcionario(String nome, String rg){
+    public Funcionario(String nome, String rg, int codigo){
         this.nome = nome;
         this.rg = rg;
+        this.codigo = codigo;
     }
     
     // getters e setters
 
     public String getNome() {
         return nome;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getRg() {
@@ -42,7 +52,8 @@ public abstract class Funcionario {
     
     public void hollerith(){
         System.out.print("Nome: " + nome + "\n" + 
-                            "RG: " + rg + "\n");
+                            "RG: " + rg + "\n" + 
+                            "Codigo:" + codigo + "\n");
     }
     
 }
